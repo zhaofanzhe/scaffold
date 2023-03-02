@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.github.zhaofanzhe.webtest.mapper.AccountMapper">
+  <resultMap id="BaseResultMap" type="io.github.zhaofanzhe.webtest.model.Account">
+    <!--@mbg.generated-->
+    <!--@Table account-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="created_at" jdbcType="TIMESTAMP" property="createdAt" />
+    <result column="updated_at" jdbcType="TIMESTAMP" property="updatedAt" />
+    <result column="deleted_at" jdbcType="TIMESTAMP" property="deletedAt" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="avatar" jdbcType="VARCHAR" property="avatar" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, created_at, updated_at, deleted_at, phone, `password`, avatar
+  </sql>
+
+  <select id="test3" resultType="java.util.Map">
+      select '130xxxxxxxxxxxxx39' as id_card,
+             '陈xx'               as name,
+             18                   as age
+  </select>
+</mapper>

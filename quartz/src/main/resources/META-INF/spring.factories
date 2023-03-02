@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  io.github.zhaofanzhe.scaffold.quartz.DataSourceConfig, \
+  io.github.zhaofanzhe.scaffold.quartz.SchedulerConfig

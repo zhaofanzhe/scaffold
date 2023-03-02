@@ -1,0 +1,17 @@
+spring:
+  redis:
+    client-type: lettuce
+  cache:
+    type: redis
+  session:
+    store-type: redis
+    redis:
+      flush-mode: immediate
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: never
+  servlet:
+    multipart:
+      max-file-size: 125MB
+      max-request-size: 256MB

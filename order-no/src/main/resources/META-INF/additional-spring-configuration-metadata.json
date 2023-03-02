@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "order-no-generator.global-prefix",
+      "type": "java.lang.String",
+      "description": "订单号生成器,全局前缀."
+    }
+  ]
+}
