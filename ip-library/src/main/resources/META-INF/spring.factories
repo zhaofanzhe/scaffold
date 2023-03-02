@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  io.github.zhaofanzhe.scaffold.ip.IpLibraryAutoConfig
+  com.github.zhaofanzhe.scaffold.ip.IpLibraryAutoConfig

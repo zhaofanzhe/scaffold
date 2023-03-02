@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  io.github.zhaofanzhe.scaffold.lock.RedisLockAutoConfiguration
+  com.github.zhaofanzhe.scaffold.lock.RedisLockAutoConfiguration

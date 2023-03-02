@@ -1,2 +1,2 @@
 org.springframework.boot.env.EnvironmentPostProcessor=\
-  io.github.zhaofanzhe.scaffold.starter.ScaffoldStarterEnvironmentPostProcessor
+  com.github.zhaofanzhe.scaffold.starter.ScaffoldStarterEnvironmentPostProcessor

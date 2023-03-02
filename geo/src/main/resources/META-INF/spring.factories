@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  io.github.zhaofanzhe.scaffold.geo.GeoAutoConfiguration
+  com.github.zhaofanzhe.scaffold.geo.GeoAutoConfiguration

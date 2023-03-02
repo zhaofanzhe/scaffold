@@ -1,5 +1,5 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  io.github.zhaofanzhe.scaffold.ScaffoldAutoConfiguration, \
-  io.github.zhaofanzhe.scaffold.config.CorsConfig, \
-  io.github.zhaofanzhe.scaffold.config.GlobalTypeConfig, \
-  io.github.zhaofanzhe.scaffold.config.SessionConfig
+  com.github.zhaofanzhe.scaffold.ScaffoldAutoConfiguration, \
+  com.github.zhaofanzhe.scaffold.config.CorsConfig, \
+  com.github.zhaofanzhe.scaffold.config.GlobalTypeConfig, \
+  com.github.zhaofanzhe.scaffold.config.SessionConfig

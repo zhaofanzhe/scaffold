@@ -1,2 +1,2 @@
 org.springframework.boot.env.EnvironmentPostProcessor=\
-  io.github.zhaofanzhe.scaffold.mongo.MongoEnvironmentPostProcessor
+  com.github.zhaofanzhe.scaffold.mongo.MongoEnvironmentPostProcessor

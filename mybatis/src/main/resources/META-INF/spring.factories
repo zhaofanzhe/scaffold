@@ -1,4 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  io.github.zhaofanzhe.scaffold.mybatis.MybatisAutoConfiguration
+  com.github.zhaofanzhe.scaffold.mybatis.MybatisAutoConfiguration
 org.springframework.boot.env.EnvironmentPostProcessor=\
-  io.github.zhaofanzhe.scaffold.mybatis.MybatisEnvironmentPostProcessor
+  com.github.zhaofanzhe.scaffold.mybatis.MybatisEnvironmentPostProcessor

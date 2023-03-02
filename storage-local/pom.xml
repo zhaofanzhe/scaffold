@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
-        <groupId>io.github.zhaofanzhe.scaffold</groupId>
+        <groupId>com.github.zhaofanzhe.scaffold</groupId>
         <artifactId>ZfzScaffold</artifactId>
         <version>${revision}</version>
     </parent>
@@ -21,12 +21,12 @@
     <dependencies>
 
         <dependency>
-            <groupId>io.github.zhaofanzhe.scaffold</groupId>
+            <groupId>com.github.zhaofanzhe.scaffold</groupId>
             <artifactId>storage</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>io.github.zhaofanzhe.scaffold</groupId>
+            <groupId>com.github.zhaofanzhe.scaffold</groupId>
             <artifactId>mybatis</artifactId>
         </dependency>
 

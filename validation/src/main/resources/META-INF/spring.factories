@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  io.github.zhaofanzhe.scaffold.auth.AuthAutoConfiguration
+  com.github.zhaofanzhe.scaffold.auth.AuthAutoConfiguration

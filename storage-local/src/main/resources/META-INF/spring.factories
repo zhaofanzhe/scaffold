@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-    io.github.zhaofanzhe.scaffold.storage.LocalStorageAutoConfiguration
+    com.github.zhaofanzhe.scaffold.storage.LocalStorageAutoConfiguration

@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  io.github.zhaofanzhe.scaffold.wx.WxAutoConfiguration
+  com.github.zhaofanzhe.scaffold.wx.WxAutoConfiguration
