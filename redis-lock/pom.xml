@@ -3,12 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.github.zhaofanzhe.scaffold</groupId>
-        <artifactId>ZfzScaffold</artifactId>
+        <groupId>com.github.zhaofanzhe</groupId>
+        <artifactId>scaffold</artifactId>
         <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.github.zhaofanzhe.scaffold</groupId>
     <artifactId>redis-lock</artifactId>
 
     <properties>
@@ -20,7 +21,7 @@
 
         <dependency>
             <groupId>com.github.zhaofanzhe.scaffold</groupId>
-            <artifactId>scaffold</artifactId>
+            <artifactId>scaffold-core</artifactId>
         </dependency>
 
         <dependency>
