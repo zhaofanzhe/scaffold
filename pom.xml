@@ -23,6 +23,7 @@
         <module>redis-lock</module>
         <module>sms</module>
         <module>sms-aliyun</module>
+        <module>sms-mock</module>
         <module>storage</module>
         <module>storage-local</module>
         <module>storage-aliyun</module>
@@ -44,7 +45,7 @@
     <description>ZfzScaffoldProject</description>
 
     <properties>
-        <revision>0.0.1-SNAPSHOT</revision>
+        <revision>0.0.2-SNAPSHOT</revision>
         <java.version>17</java.version>
     </properties>
 
@@ -196,6 +197,12 @@
             <dependency>
                 <groupId>com.github.zhaofanzhe.scaffold</groupId>
                 <artifactId>sms-aliyun</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.zhaofanzhe.scaffold</groupId>
+                <artifactId>sms-mock</artifactId>
                 <version>${revision}</version>
             </dependency>
 

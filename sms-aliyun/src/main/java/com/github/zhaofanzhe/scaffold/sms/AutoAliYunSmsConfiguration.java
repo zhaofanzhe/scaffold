@@ -26,4 +26,9 @@ public class AutoAliYunSmsConfiguration {
         return new AliYunSmsClient(aliyunClient(aliYunSmsConfig));
     }
 
+    @Bean
+    public SmsClient smsClient(AliYunSmsClient aliYunSmsClient) throws Exception {
+        return aliYunSmsClient;
+    }
+
 }
