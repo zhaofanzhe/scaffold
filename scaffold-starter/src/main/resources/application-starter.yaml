@@ -1,10 +1,10 @@
 spring:
-  redis:
-    client-type: lettuce
+  data:
+    redis:
+      client-type: lettuce
   cache:
     type: redis
   session:
-    store-type: redis
     redis:
       flush-mode: immediate
   quartz:
