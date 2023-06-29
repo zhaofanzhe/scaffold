@@ -12,7 +12,8 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.MethodSignature;
-import org.springframework.core.LocalVariableTableParameterNameDiscoverer;
+import org.springframework.core.DefaultParameterNameDiscoverer;
+import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.expression.EvaluationContext;
 import org.springframework.expression.Expression;
 import org.springframework.expression.ExpressionParser;
@@ -34,8 +35,14 @@ public class RedisLockAspect {
 
     private final RedisLockRegistry redisLockRegistry;
 
-    @Around(value = "@annotation(redisLock)")
-    public Object redisLock(ProceedingJoinPoint joinPoint, RedisLock redisLock) throws Throwable {
+    @Around(value = "@annotation(com.github.zhaofanzhe.scaffold.lock.RedisLock)")
+    public Object redisLock(ProceedingJoinPoint joinPoint) throws Throwable {
+
+        MethodSignature signature = (MethodSignature) joinPoint.getSignature();
+
+        Method method = signature.getMethod();
+
+        RedisLock redisLock = Objects.requireNonNull(AnnotationUtils.getAnnotation(method, RedisLock.class));
 
         final String lockKey = getRedisKey(joinPoint, redisLock);
 
@@ -103,8 +110,7 @@ public class RedisLockAspect {
 
     ExpressionParser parser = new SpelExpressionParser();
 
-    LocalVariableTableParameterNameDiscoverer discoverer = new LocalVariableTableParameterNameDiscoverer();
-
+    DefaultParameterNameDiscoverer discoverer = new DefaultParameterNameDiscoverer();
 
     private String getSpELKey(ProceedingJoinPoint joinPoint, RedisLock redisLock) {
         final Object[] args = joinPoint.getArgs();
