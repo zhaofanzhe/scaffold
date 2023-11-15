@@ -13,7 +13,7 @@
     <parent>
         <groupId>com.github.zhaofanzhe.scaffold</groupId>
         <artifactId>ScaffoldProject</artifactId>
-        <version>0.0.1</version>
+        <version>0.0.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <!-- 省略 -->
