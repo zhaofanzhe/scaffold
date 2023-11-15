@@ -1,14 +1,17 @@
 package com.github.zhaofanzhe.scaffold.storage;
 
 import cn.hutool.core.util.StrUtil;
+import com.aliyun.oss.ClientBuilderConfiguration;
 import com.aliyun.oss.OSS;
 import com.aliyun.oss.OSSClientBuilder;
+import com.aliyun.oss.common.comm.Protocol;
 import com.aliyun.oss.model.PutObjectRequest;
 import com.github.zhaofanzhe.scaffold.storage.secure.StorageId;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.InputStream;
+import java.util.Objects;
 
 public class AliYunStorageFactory implements StorageFactory<AliYunStorage> {
 
@@ -17,9 +20,20 @@ public class AliYunStorageFactory implements StorageFactory<AliYunStorage> {
     private final OSS client;
 
     public AliYunStorageFactory(AliYunStorageConfig aliYunStorageConfig) {
+        if (StrUtil.isEmpty(aliYunStorageConfig.getAccessKeyId())) {
+            throw new IllegalArgumentException("accessKeyId 不能为空");
+        }
+        if (StrUtil.isEmpty(aliYunStorageConfig.getSecretAccessKey())) {
+            throw new IllegalArgumentException("secretAccessKey 不能为空");
+        }
         this.config = aliYunStorageConfig;
+        final ClientBuilderConfiguration configuration = new ClientBuilderConfiguration();
+        // 配置协议为 HTTPS
+        if (Objects.equals(aliYunStorageConfig.getProtocol(), AliYunStorageConfig.Protocol.HTTPS)) {
+            configuration.setProtocol(Protocol.HTTPS);
+        }
         this.client = new OSSClientBuilder()
-                .build(aliYunStorageConfig.getEndpoint(), aliYunStorageConfig.getAccessKeyId(), aliYunStorageConfig.getAccessKeySecret());
+                .build(aliYunStorageConfig.getEndpoint(), aliYunStorageConfig.getAccessKeyId(), aliYunStorageConfig.getSecretAccessKey(), configuration);
     }
 
     @Override

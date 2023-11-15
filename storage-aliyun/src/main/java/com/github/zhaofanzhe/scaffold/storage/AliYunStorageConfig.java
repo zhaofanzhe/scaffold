@@ -14,18 +14,28 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "storage.aliyun")
 public class AliYunStorageConfig {
 
+    public static enum Protocol {
+        HTTP,
+        HTTPS
+    }
+
     /**
-     * 资源key
+     * AccessKeyId
      */
     private String accessKeyId;
 
     /**
-     * 安全key
+     * SecretAccessKey
      */
-    private String accessKeySecret;
+    private String secretAccessKey;
 
     /**
-     * 端口
+     * 协议
+     */
+    private Protocol protocol = Protocol.HTTP;
+
+    /**
+     * 端点
      */
     private String endpoint;
 
